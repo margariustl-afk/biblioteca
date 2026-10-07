@@ -1,0 +1,10 @@
+.radio-row{display:block;padding:12px;margin:8px 0;border:1px solid #9aaabd;border-radius:8px;cursor:pointer}
+.radio-row input{width:24px;height:24px;vertical-align:middle;margin-right:8px}
+fieldset{border:2px solid #8a9cad;border-radius:8px}
+legend{font-weight:700;padding:0 6px}
+[hidden]{display:none!important}
+.floating-dialog{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.7);display:flex;align-items:center;justify-content:center;padding:16px}
+.floating-card{background:#fff;color:#17212b;border:3px solid #17345f;border-radius:12px;padding:24px;max-width:520px;width:100%;max-height:90vh;overflow:auto;box-shadow:0 12px 35px #0005}
+.floating-card h2{margin-top:0}
+:focus-visible{outline:4px solid #f59e0b!important;outline-offset:3px}
+@media print{#installDialog,#configuracion{display:none!important}}

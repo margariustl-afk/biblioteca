@@ -1,0 +1,20 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function autorizado() {
+      return request.auth != null && request.auth.uid == 'r3xm9ySbNjQpO55ZfWXbz1pypXb2';
+    }
+    match /usuarios/{id} {
+      allow read, create, update, delete: if autorizado();
+    }
+    match /visitas/{id} {
+      allow read, create, update, delete: if autorizado();
+    }
+    match /dispositivos/{id} {
+      allow read, create, update, delete: if autorizado();
+    }
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
